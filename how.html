@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+
+        <script>
+            function popupMenu()
+            {
+                if (document.getElementById("navbar-title-wrapper").classList.contains("popup-menu"))
+                {
+                    document.getElementById("navbar-title-wrapper").classList.remove("popup-menu");
+                }
+                else
+                {
+                    document.getElementById("navbar-title-wrapper").classList.add("popup-menu");
+                }
+
+            }
+        </script>
+        <script src="js/funfacts.js"></script>
+
+    </head>
+    <body>
+
+
+        <div class="navbar">
+
+            <a href="index.html">
+                <img src="images/logo.png" class="logo" alt="" >
+            </a>
+
+            <div class="navbar-title-wrapper" id="navbar-title-wrapper">
+                <a href="index.html" class="navbar-title">Home</a>
+                <a href="lack.html" class="navbar-title">Lack of sleep</a>
+                <a href="how.html" class="navbar-title">Sleep better</a>
+                <a href="learn.html" class="navbar-title">Learn more</a>
+
+            </div>
+
+            <div class="hamburger-menu" onclick="popupMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+
+
+        <div class="content">
+
+            <h1>How to sleep better?</h1>
+
+            <br>
+
+            <p>Here are some things you can change about your sleep habits to ensure better rest.</p>
+
+            <h2>Turn off lights</h2>
+            <p>Artificial light in the evenings will affect your internal sleep-wake cycle.
+                Your body then suppresses the melatonin release making it harder for you to fall asleep.
+                For this reason, it's best to stay away from the screens before sleep.
+            </p>
+
+            <h2>Lay off drinking</h2>
+            <p>It may seem that alcohol helps you fall asleep more easily but it actually disrupts your sleep.
+                Alcohol-infused sleep is fragmented, full of brief awakenings.
+                Alcohol is also one of the most powerful suppressors of REM sleep.
+                For good quality sleep stay sober.
+            </p>
+
+            <h2>Cool the room</h2>
+            <p>To successfully initiate sleep your core temperature needs to decrease by about 1 degree Celsius.
+                For this reason it's easier to fall asleep in a room that's too cold than one that's too hot.
+            </p>
+
+        </div>
+
+        <div class="footer" >
+
+            <div class="slider">
+
+                <div class="arrow-container" style="margin-right: 2rem;" >
+                    <img src="images/arrowL.png" class="arrow" onclick="changeFact(false)" alt="" >
+                </div>
+
+                <p id="fact"></p>
+
+                <div class="arrow-container" style="margin-left: 2rem;" >
+                    <img src="images/arrowR.png" class="arrow" onclick="changeFact()" alt="" >
+                </div>
+
+            </div>
+
+            <img src="images/whale.png" class="whale animal" alt="" >
+        </div>
+
+    </body>
+</html>

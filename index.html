@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+
+        <script>
+            function popupMenu()
+            {
+                if (document.getElementById("navbar-title-wrapper").classList.contains("popup-menu"))
+                {
+                    document.getElementById("navbar-title-wrapper").classList.remove("popup-menu");
+                }
+                else
+                {
+                    document.getElementById("navbar-title-wrapper").classList.add("popup-menu");
+                }
+
+            }
+
+            function onResize()
+            {
+                if (document.documentElement.clientWidth >= 1080)
+                {
+                    document.getElementById("navbar-title-wrapper").classList.remove("popup-menu");
+                }
+
+            }
+
+            window.addEventListener("resize", onResize);
+
+        </script>
+        <script src="js/funfacts.js"></script>
+
+    </head>
+    <body>
+
+
+        <div class="navbar">
+
+            <a href="index.html">
+                <img src="images/logo.png" class="logo" alt="" >
+            </a>
+
+            <div class="navbar-title-wrapper" id="navbar-title-wrapper">
+                <a href="index.html" class="navbar-title">Home</a>
+                <a href="lack.html" class="navbar-title">Lack of sleep</a>
+                <a href="how.html" class="navbar-title">Sleep better</a>
+                <a href="learn.html" class="navbar-title">Learn more</a>
+
+            </div>
+
+            <div class="hamburger-menu" onclick="popupMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+        </div>
+
+
+
+        <div class="content">
+
+            <h1>Importance of sleep</h1>
+
+            <br>
+
+            <p>Humans are only species that deliberately deprive themselves of sleep without legitimate gain.<br>
+                Two thirds of adults throughout all developed nations fail to obtain the recommended eight hours of sleep.<br>
+                People tend to see the lack of sleep as an inconvinience rather than a risk to health.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer" >
+
+            <div class="slider">
+
+                <div class="arrow-container" style="margin-right: 2rem;" >
+                    <img src="images/arrowL.png" class="arrow" onclick="changeFact(false)" alt="" >
+                </div>
+
+                <p id="fact"></p>
+
+                <div class="arrow-container" style="margin-left: 2rem;" >
+                    <img src="images/arrowR.png" class="arrow" onclick="changeFact()" alt="" >
+                </div>
+
+            </div>
+
+            <img src="images/cat.png" class="cat animal" alt="" >
+
+        </div>
+
+    </body>
+</html>
